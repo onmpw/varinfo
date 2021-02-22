@@ -322,7 +322,7 @@ PHP_FUNCTION(varinfo)
             PHPWRITE("no such symbol.\n",16);
         }
         convert_str(&strg,p,&len);
-        ZVAL_STRINGL(return_value,get_string(strg),len,1);
+        V_ZVAL_STRINGL(return_value,get_string(strg),len,1);
         free(p);
         p = NULL;
         efree(strg);
